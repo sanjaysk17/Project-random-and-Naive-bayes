@@ -1,47 +1,37 @@
-📝 Student Study Habits – Part-Time Job Prediction
+📝 Student Study Habits – Pass/Fail Prediction
 📌 Project Overview
 
-This project analyzes student study habits and predicts whether a student will take a part-time job based on their academic and personal attributes.
+This project predicts whether a student will pass or fail based on their study habits and background attributes.
 
-It applies machine learning classification techniques to discover patterns between study behavior and the decision to work part-time.
+It applies machine learning classification techniques to explore the relationship between student behavior and academic performance.
 
 📊 Dataset
 
-File: student_study_habits.csv
+📂 Source: Student Study Habits Dataset – Kaggle
 
-Each row: represents one student.
+Each row represents one student.
 
-Features (examples):
+Features:
 
-📖 Study Hours per Week
+📖 Study Hours per Week (study_hours)
 
-🎓 GPA / Grades
+🎓 Attendance Rate (%) (attendance_rate)
 
-😥 Stress Levels
+📝 Assignments Completed (assignments_completed)
 
-🏀 Extracurricular Activities
+🛌 Sleep Hours (sleep_hours)
 
-💰 Financial Need
-
-🛌 Sleep Hours
-
-...
+👪 Parental Education (parental_education)
 
 Target Variable:
 
-Part_time_job → (Yes = 1, No = 0)
+pass_fail → (Pass = 1, Fail = 0)
 
 🎯 Problem Statement
 
-Given student study habits and background factors, predict if the student will go for a part-time job or not.
+A school wants to predict whether a student will pass or fail based on their study habits and background factors.
 
 This is a binary classification problem.
-
-⚙️ Requirements
-
-Before running the notebook, install dependencies:
-
-pip install pandas numpy matplotlib seaborn scikit-learn jupyter
 
 🚀 How to Run
 
@@ -56,20 +46,22 @@ Run all cells step by step.
 
 The notebook will:
 
-Load and clean the dataset
+Load and preprocess the dataset
 
 Perform Exploratory Data Analysis (EDA)
 
-Train classification models (Logistic Regression, Decision Tree, Random Forest, Naïve Bayes, etc.)
+Train Random Forest and Naïve Bayes classifiers
 
-Predict if a student will take a part-time job
+Compare their performance
+
+Predict outcomes for new students
 
 📈 Results & Model Comparison
-Model	                Accuracy	       Notes
-Naïve Bayes	            ~0.31%	      Works well with small data, but less accurate here
-🌟 Random Forest	   ~0.69%	     ✅ Best accuracy, robust and reliable
+Model	       Accuracy	    Notes
+Naïve Bayes	    ~0.68	    Works for simple cases, less accurate
+Random Forest	~0.90	    ✅ Best accuracy, robust and reliable
 
-👉 Random Forest outperformed all other models in terms of accuracy and overall performance.
+👉 Random Forest outperformed Naïve Bayes in terms of accuracy and reliability.
 
 🎯 Expected Output
 
@@ -77,7 +69,24 @@ Naïve Bayes	            ~0.31%	      Works well with small data, but less accur
 
 📌 Model performance metrics (accuracy, precision, recall, F1-score)
 
-🤖 Final Prediction: Will a student take a part-time job (Yes/No)?
+🤖 Prediction for a new student
+My streamlit:
+![Streamlit](output.png)
 
-✨ Conclusion:
-Random Forest proved to be the most effective model for predicting part-time job decisions based on student study habits.
+Example Input:
+
+study_hours = 15
+attendance_rate = 90%
+assignments_completed = 10
+sleep_hours = 8
+parental_education = Bachelor's Degree
+
+
+Example Output:
+➡️ Random Forest → Pass ✅
+
+✨ Conclusion
+
+Both models were tested for predicting student performance.
+
+Random Forest proved to be the most effective model for predicting pass/fail outcomes.

@@ -4,3 +4,5 @@ scikit-learn
 matplotlib
 seaborn
 sympy
+imbalanced-learn
+streamlit
