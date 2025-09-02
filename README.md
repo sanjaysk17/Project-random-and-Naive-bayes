@@ -1,4 +1,5 @@
 📝 Student Study Habits – Pass/Fail Prediction
+My App:https://project-random-and-naive-bayes-mhma8stzv3fb5uetezuh9q.streamlit.app/
 📌 Project Overview
 
 This project predicts whether a student will pass or fail based on their study habits and background attributes.
